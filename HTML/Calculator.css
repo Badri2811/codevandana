@@ -1,0 +1,56 @@
+body{
+    background-color: lightgray;
+}
+
+.calculator{
+    margin-left: 30%;
+    margin-top: 5%;
+    width: 30%;
+    box-shadow: 10px;
+}
+
+.num{
+    background-color: black;
+    color: white;
+    margin: 0px;
+    margin-left: -5px;
+    width: 40px;
+    height: 30px;
+    padding: 50px;
+    border: none;
+    font-size: 30px;
+}
+
+.math{
+    background-color: gray;
+    color: white;
+    margin: 0px;
+    margin-left: -5px;
+    width: 30px;
+    height: 30px;
+    padding: 50px;
+    border: none;
+    font-size: 30px;
+}
+
+.clear{
+    
+    float: right;
+    margin-left:-10%;
+    padding: 27px;
+    padding-right: 20px;
+    border: none;
+    background-color: teal;
+    color: white;
+    font-size: 30px;
+    margin-right: 0px;
+}
+
+#result{
+    position: relative;
+    height: 88px;
+    width: 73%;
+    border: none;
+    border-left: -15px;
+    font-size: 20px;
+}

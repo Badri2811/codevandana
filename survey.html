@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Survey Form</title>
+  <link rel="stylesheet" href="survey.css">
+  <script src="script.js"></script>
+</head>
+<body>
+  <h1 style="text-align: center;">Survey Form</h1>
+
+  <form action="" method="post" onsubmit="return validateForm()">
+<fieldset>
+    <div class="field">
+      <label for="firstName">First Name</label>
+      <input type="text" name="firstName" id="firstName" required>
+    </div>
+    <div class="field">
+      <label for="lastName">Last Name</label>
+      <input type="text" name="lastName" id="lastName" required>
+    </div>
+    <div class="field">
+      <label for="dateOfBirth">Date of Birth</label>
+      <input type="date" name="dateOfBirth" id="dateOfBirth" required>
+    </div>
+    <div class="field">
+      <label for="country">Country</label>
+      <select name="country" id="country" required>
+        <option value="">Select Country</option>
+        <option value="India">India</option>
+        <option value="United States">United States</option>
+        <option value="United Kingdom">United Kingdom</option>
+        <option value="Australia">Australia</option>
+        <option value="Canada">Canada</option>
+      </select>
+    </div>
+    <div class="field">
+      <label for="gender">Gender</label>
+      <input type="checkbox" name="gender" id="genderMale" value="Male"> Male
+      <input type="checkbox" name="gender" id="genderFemale" value="Female"> Female
+    </div>
+    <div class="field">
+      <label for="profession">Profession</label>
+      <input type="text" name="profession" id="profession" required>
+    </div>
+    <div class="field">
+      <label for="email">Email</label>
+      <input type="email" name="email" id="email" required>
+    </div>
+    <div class="field">
+      <label for="mobileNumber">Mobile Number</label>
+      <input type="tel" name="mobileNumber" id="mobileNumber" required>
+    </div>
+    <div>
+      <button class="submit-button">Submit</button>
+      <button class="reset-button">Reset</button>
+    </div>
+  </form>
+</fieldset>
+</body>
+</html>
+
+

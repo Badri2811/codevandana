@@ -1,0 +1,38 @@
+JAVA SCRIPT
+
+1. Take a sentence as an input and reverse every word in that sentence. 
+Example - This is a sunny day > shiT si a ynnus yad.
+
+
+
+var sentence = prompt("Enter a sentence:");
+
+
+var reversedWords = sentence.split(' ').map(function(word) {
+    return word.split('').reverse().join('');
+});
+
+
+var reversedSentence = reversedWords.join(' ');
+
+
+console.log("Reversed Sentence: " + reversedSentence);
+
+
+2. Perform sorting of an array in descending order.
+
+
+var inputString = prompt("Enter elements of the array separated by commas:");
+var inputArray = inputString.split(',').map(function(item) {
+    return parseInt(item.trim());
+});
+
+
+var sortedArray = inputArray.sort(function(a, b) {
+    return b - a;
+});
+
+
+console.log("Sorted Array in Descending Order: " + sortedArray.join(','));
+
+

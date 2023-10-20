@@ -1,0 +1,28 @@
+body {
+    background-color: aqua;
+    font-family: sans-serif;
+  }
+  
+  form {
+    background-color: aliceblue;
+    width: 400px;
+    margin: 0 auto;
+
+  }
+  
+  .field {
+    margin-bottom: 10px;
+  }
+
+  .submit-button{
+    background-color:lightblue;
+    align-items: center;
+    margin-left: 25%;
+
+  }
+
+  .reset-button{
+    background-color: lightblue;
+    align-items: center;
+    margin-right: 25%;
+  }

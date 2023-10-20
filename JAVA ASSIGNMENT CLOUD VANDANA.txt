@@ -1,0 +1,134 @@
+JAVA
+
+1.  Create an array with the values (1, 2, 3, 4, 5, 6, 7) and shuffle it.
+
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+import java.util.Scanner;
+
+public class UserInputArrayShuffler {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        
+        System.out.print("Enter the size of the array: ");
+        int size = scanner.nextInt();
+
+        
+        Integer[] array = new Integer[size];
+        System.out.println("Enter the elements of the array separated by spaces:");
+
+        for (int i = 0; i < size; i++) {
+            array[i] = scanner.nextInt();
+        }
+
+        
+        shuffleArray(array);
+
+        
+        System.out.println("Shuffled Array: " + Arrays.toString(array));
+    }
+
+    private static void shuffleArray(Integer[] array) {
+        List<Integer> list = Arrays.asList(array);
+        Collections.shuffle(list);
+        list.toArray(array);
+    }
+}
+
+
+
+
+
+2. Enter a Roman Number as input and convert it to an integer. (Example: IX = 9)
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
+
+public class RomanToIntegerConverter {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        
+        System.out.print("Enter a Roman numeral: ");
+        String romanNumeral = scanner.nextLine().toUpperCase();
+
+        
+        int result = romanToInteger(romanNumeral);
+
+       
+        System.out.println("Integer equivalent: " + result);
+    }
+
+    private static int romanToInteger(String s) {
+        Map<Character, Integer> romanMap = new HashMap<>();
+        romanMap.put('I', 1);
+        romanMap.put('V', 5);
+        romanMap.put('X', 10);
+        romanMap.put('L', 50);
+        romanMap.put('C', 100);
+        romanMap.put('D', 500);
+        romanMap.put('M', 1000);
+
+        int result = 0;
+
+        for (int i = 0; i < s.length(); i++) {
+            int currentVal = romanMap.get(s.charAt(i));
+            
+            
+            if (i + 1 < s.length() && romanMap.get(s.charAt(i + 1)) > currentVal) {
+                result -= currentVal;
+            } else {
+                result += currentVal;
+            }
+        }
+
+        return result;
+    }
+}
+
+
+
+3.  Check if the input is pangram or not. (A pangram is a sentence that contains all the 
+alphabets from A to Z)
+
+import java.util.HashSet;
+import java.util.Scanner;
+import java.util.Set;
+
+public class PangramChecker {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        
+        System.out.print("Enter a sentence: ");
+        String input = scanner.nextLine().toLowerCase(); 
+
+        
+        boolean isPangram = checkPangram(input);
+
+       
+        if (isPangram) {
+            System.out.println("The input is a pangram.");
+        } else {
+            System.out.println("The input is not a pangram.");
+        }
+    }
+
+    private static boolean checkPangram(String input) {
+        Set<Character> uniqueCharacters = new HashSet<>();
+
+       
+        for (char c : input.toCharArray()) {
+            if (Character.isAlphabetic(c)) {
+                uniqueCharacters.add(c);
+            }
+        }
+
+        
+        return uniqueCharacters.size() == 26;
+    }
+}
+
